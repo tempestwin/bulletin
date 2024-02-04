@@ -1,0 +1,4 @@
+nas234.shao.sh enp39s0 00:d8:61:78:4a:87
+nas246.shao.sh enp5s0 b4:2e:99:0e:ea:d5
+nas248.shao.sh enp4s0 18:c0:4d:38:ce:f6
+nas249.shao.sh enp5s0 18:c0:4d:23:83:c9
