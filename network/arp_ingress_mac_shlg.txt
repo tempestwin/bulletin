@@ -1,0 +1,2 @@
+nas230.shao.shlg enp5s0 b4:2e:99:19:6e:20
+nas231.shao.shlg enp5s0 b4:2e:99:41:38:4f
