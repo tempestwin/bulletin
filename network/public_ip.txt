@@ -1,5 +1,5 @@
-## Public IP Infomration Wed Mar 27 02:00:01 CST 2024
-* nas246.shao.sh 192.168.50.246 58.37.83.86
+## Public IP Infomration Thu Mar 28 02:00:02 CST 2024
+* nas246.shao.sh 192.168.50.246 upstream connect error or disconnect/reset before headers. retried and the latest reset reason: remote connection failure, transport failure reason: delayed connect error: 111
 * sh-vpn.shao.shlg 10.8.0.10 117.144.69.141
 * sh-vpn.shao.lx 10.8.0.6 122.242.39.41
 
