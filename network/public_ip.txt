@@ -1,4 +1,4 @@
-## Public IP Infomration Tue Apr  9 02:00:02 CST 2024
+## Public IP Infomration Wed Apr 10 02:00:02 CST 2024
 * nas246.shao.sh 192.168.50.246 58.37.83.86
 * sh-vpn.shao.shlg 10.8.0.10 117.144.69.141
 * sh-vpn.shao.lx 10.8.0.14 115.211.2.113
