@@ -1,8 +1,8 @@
-2024-07-13 01:53:12 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
-2024-07-13 01:53:12 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
-2024-07-13 01:53:13 WARN:: Avaiable Ingress IP And Mac
-2024-07-13 01:53:13 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in
+2024-07-14 01:51:09 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
+2024-07-14 01:51:09 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
+2024-07-14 01:51:09 WARN:: Avaiable Ingress IP And Mac
+2024-07-14 01:51:09 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in
 netsh -c i i add neighbors 7 192.168.50.28 00-d8-61-78-4a-87 169.254.28.214_eth0
 arp -s 192.168.50.28 00-d8-61-78-4a-87 169.254.28.214_eth0
-2024-07-13 01:53:13 INFO:: tool list_ingress install completed
+2024-07-14 01:51:09 INFO:: tool list_ingress install completed
 
