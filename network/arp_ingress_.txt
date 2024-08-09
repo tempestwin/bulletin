@@ -1,10 +1,12 @@
-2024-08-09 01:53:07 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
-2024-08-09 01:53:07 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
-[31m2024-08-09 01:53:08 WARN:: Avaiable Ingress IP And Mac(B[m
+2024-08-10 01:51:11 INFO:: rm -f /tmp/script_changed
+2024-08-10 01:51:11 INFO:: rm -f /tmp/plugin_cache/plugin_cache_file
+2024-08-10 01:51:13 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
+2024-08-10 01:51:13 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
+[31m2024-08-10 01:51:13 WARN:: Avaiable Ingress IP And Mac(B[m
 192.168.10.28            ether   6c:92:bf:27:4e:fb   C                     eth0
 192.168.10.231           ether   6c:92:bf:27:4e:fb   C                     eth0
-[31m2024-08-09 01:53:08 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in(B[m
+[31m2024-08-10 01:51:13 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in(B[m
 netsh -c i i add neighbors 7 192.168.10.28 6c-92-bf-27-4e-fb
 arp -s 192.168.10.28 6c-92-bf-27-4e-fb
-2024-08-09 01:53:08 INFO:: tool list_ingress install completed
+2024-08-10 01:51:13 INFO:: tool list_ingress install completed
 
