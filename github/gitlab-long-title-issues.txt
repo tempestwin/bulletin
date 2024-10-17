@@ -157,6 +157,8 @@
 [47831,48642] /volume2/git/freeCodeCamp/freeCodeCamp.git/GITHUB_ISSUES/CLONE_ISSUES_0048
 [53655] /volume2/git/freeCodeCamp/freeCodeCamp.git/GITHUB_ISSUES/CLONE_ISSUES_0053
 [53825,54149] /volume2/git/freeCodeCamp/freeCodeCamp.git/GITHUB_ISSUES/CLONE_ISSUES_0054
+[690] /volume2/git/Frooodle/Stirling-PDF.git/GITHUB_ISSUES/CLONE_ISSUES_0001
+[1709] /volume2/git/Frooodle/Stirling-PDF.git/GITHUB_ISSUES/CLONE_ISSUES_0002
 [761] /volume2/git/GaiZhenbiao/ChuanhuChatGPT.git/GITHUB_ISSUES/CLONE_ISSUES_0001
 [145,460,477,483] /volume2/git/getsentry/self-hosted.git/GITHUB_ISSUES/CLONE_ISSUES_0001
 [2685] /volume2/git/getsentry/self-hosted.git/GITHUB_ISSUES/CLONE_ISSUES_0003
