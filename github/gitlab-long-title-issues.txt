@@ -14,7 +14,7 @@
 [50170] /volume2/git/ant-design/ant-design.git/GITHUB_ISSUES/CLONE_ISSUES_0048
 [150] /volume2/git/apache/skywalking.git/GITHUB_ISSUES/CLONE_ISSUES_0001
 [11550] /volume2/git/apache/skywalking.git/GITHUB_ISSUES/CLONE_ISSUES_0002
-[11507,12921,16225,16318,16336,16502,14180,16502,16502] /volume2/git/AUTOMATIC1111/stable-diffusion-webui.git/GITHUB_ISSUES/CLONE_ISSUES_0001
+[11507,12921,16225,16318,16336,16502,14180,16502,16502,16225,16502] /volume2/git/AUTOMATIC1111/stable-diffusion-webui.git/GITHUB_ISSUES/CLONE_ISSUES_0001
 [12991] /volume2/git/babel/babel.git/GITHUB_ISSUES/CLONE_ISSUES_0013
 [14755] /volume2/git/babel/babel.git/GITHUB_ISSUES/CLONE_ISSUES_0015
 [16723] /volume2/git/babel/babel.git/GITHUB_ISSUES/CLONE_ISSUES_0016
@@ -284,6 +284,8 @@
 [708] /volume2/git/spring-projects/spring-petclinic.git/GITHUB_ISSUES/CLONE_ISSUES_0001
 [13971] /volume2/git/spring-projects/spring-security.git/GITHUB_ISSUES/CLONE_ISSUES_0014
 [14497] /volume2/git/spring-projects/spring-security.git/GITHUB_ISSUES/CLONE_ISSUES_0015
+[690] /volume2/git/Stirling-Tools/Stirling-PDF.git/GITHUB_ISSUES/CLONE_ISSUES_0001
+[1709] /volume2/git/Stirling-Tools/Stirling-PDF.git/GITHUB_ISSUES/CLONE_ISSUES_0002
 [1806] /volume2/git/tabler/tabler.git/GITHUB_ISSUES/CLONE_ISSUES_0002
 [8346] /volume2/git/tauri-apps/tauri.git/GITHUB_ISSUES/CLONE_ISSUES_0001
 [65] /volume2/git/tuna/issues.git/GITHUB_ISSUES/CLONE_ISSUES_0001
