@@ -21,6 +21,19 @@ stages:          # List of stages for jobs, and their order of execution
   - test
   - deploy
 
+setup-python-job:
+  stage: build
+  script:
+    - echo "setup python"
+    - |
+      command -v python3 || {
+        sudo apt-get install python3 python3-pip
+      }
+      ping -c 1 -W 1 www.google.com.hk || {
+        pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+      }
+      pip3 install -r requirements.txt
+
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
@@ -55,6 +68,8 @@ pages:
   - |
     chmod +x tools/doc.sh
     tools/doc.sh
+    mkdocs build --clean --site-dir public
+    mkdocs --version
   artifacts:
     paths:
       - public
