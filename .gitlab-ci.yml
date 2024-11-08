@@ -26,9 +26,8 @@ setup-python-job:
   script:
     - echo "setup python"
     - |
-      curl -s http://deb.debian.org --max-time 1 -o /dev/null || {
-        [ -f /etc/apt/sources.list ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list
-      }
+      [ -f /etc/apt/sources.list ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list
+      
       command -v ping || {
         [ -f /etc/apt/sources.list ] && cat /etc/apt/sources.list
         [ -f /etc/os-release ] && cat /etc/os-release
