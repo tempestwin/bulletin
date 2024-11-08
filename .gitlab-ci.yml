@@ -26,10 +26,11 @@ setup-python-job:
   script:
     - echo "setup python"
     - |
-      [ -f /etc/apt/sources.list ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list
-      
+      curl -qs http://deb.debian.org --max-time 1 -o /dev/null || {
+        [ -f /etc/apt/sources.list.d/debian.sources ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list.d/debian.sources
+      }
       command -v ping || {
-        [ -f /etc/apt/sources.list ] && cat /etc/apt/sources.list
+        /etc/apt/sources.list.d/debian.sources && cat /etc/apt/sources.list.d/debian.sources
         [ -f /etc/os-release ] && cat /etc/os-release
         apt update
         apt-get install -y iputils-ping wget curl ca-certificates
@@ -38,10 +39,11 @@ setup-python-job:
       #   apt-get install -y python3 python3-pip
       # }
       # command -v pip3 || apt-get install -y python3-pip
+      env
       ping -c 1 -W 1 www.google.com.hk || {
-        pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+        pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
       }
-      pip install -r requirements.txt
+      pip3 install -r requirements.txt
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
