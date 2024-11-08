@@ -59,17 +59,21 @@
                         <mxGeometry x="480" y="85" width="70" height="30" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="16" value="github.shao.sh" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                    <mxGeometry x="140" y="85" width="80" height="30" as="geometry"/>
-                </mxCell>
+                <UserObject label="github.shao.sh" link="https://pages.github.shao.sh/tempestwin/bulletin/" id="16">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+                        <mxGeometry x="140" y="85" width="80" height="30" as="geometry"/>
+                    </mxCell>
+                </UserObject>
                 <UserObject label="gitlab.shao.sh" link="https://de.vicp.net:48443/tempestwin/bulletin/" id="22">
                     <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
                         <mxGeometry x="280" y="85" width="80" height="30" as="geometry"/>
                     </mxCell>
                 </UserObject>
-                <mxCell id="23" value="github.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                    <mxGeometry x="30" y="85" width="80" height="30" as="geometry"/>
-                </mxCell>
+                <UserObject label="github.com" link="https://tempestwin.github.io/bulletin/" id="23">
+                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+                        <mxGeometry x="30" y="85" width="80" height="30" as="geometry"/>
+                    </mxCell>
+                </UserObject>
                 <mxCell id="34" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="26" target="23">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>

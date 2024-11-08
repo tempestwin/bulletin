@@ -75,7 +75,9 @@
                                         "data": {
                                             "id": "d5ghkjswsuo0",
                                             "created": 1731037470715,
-                                            "text": "github.shao.sh"
+                                            "text": "github.shao.sh",
+                                            "hyperlink": "https://pages.github.shao.sh/tempestwin/bulletin/",
+                                            "hyperlinkTitle": ""
                                         },
                                         "children": []
                                     },
@@ -83,7 +85,9 @@
                                         "data": {
                                             "id": "d5ghka7ky9c0",
                                             "created": 1731037449834,
-                                            "text": "github.com"
+                                            "text": "github.com",
+                                            "hyperlink": "https://tempestwin.github.io/bulletin/",
+                                            "hyperlinkTitle": ""
                                         },
                                         "children": []
                                     }
