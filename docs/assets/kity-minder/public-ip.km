@@ -150,6 +150,6 @@
         ]
     },
     "template": "default",
-    "theme": "tianpan-compact",
+    "theme": "fish",
     "version": "1.4.43"
 }
