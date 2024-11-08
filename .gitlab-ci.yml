@@ -23,30 +23,6 @@ stages:          # List of stages for jobs, and their order of execution
   - test
   - deploy
 
-setup-python-job:
-  stage: build
-  script:
-    - echo "setup python"
-    - |
-      curl -qs http://deb.debian.org --max-time 1 -o /dev/null || {
-        [ -f /etc/apt/sources.list.d/debian.sources ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list.d/debian.sources
-      }
-      command -v ping || {
-        /etc/apt/sources.list.d/debian.sources && cat /etc/apt/sources.list.d/debian.sources
-        [ -f /etc/os-release ] && cat /etc/os-release
-        apt update
-        apt-get install -y iputils-ping wget curl ca-certificates
-      }
-      # command -v python3 || {
-      #   apt-get install -y python3 python3-pip
-      # }
-      # command -v pip3 || apt-get install -y python3-pip
-      env
-      ping -c 1 -W 1 www.google.com.hk || {
-        pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
-      }
-      pip3 install -r requirements.txt
-
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
@@ -77,6 +53,23 @@ deploy-job:      # This job runs in the deploy stage.
 
 pages:
   stage: deploy
+  before_script:
+    - echo "setup python"
+    - |
+      curl -qs http://deb.debian.org --max-time 1 -o /dev/null || {
+        [ -f /etc/apt/sources.list.d/debian.sources ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list.d/debian.sources
+      }
+      command -v ping || {
+        /etc/apt/sources.list.d/debian.sources && cat /etc/apt/sources.list.d/debian.sources
+        [ -f /etc/os-release ] && cat /etc/os-release
+        apt update
+        apt-get install -y iputils-ping wget curl ca-certificates
+      }
+      env
+      ping -c 1 -W 1 www.google.com.hk || {
+        pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+      }
+      pip3 install -r requirements.txt
   script:
   - |
     chmod +x tools/doc.sh
