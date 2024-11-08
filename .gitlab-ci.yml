@@ -26,14 +26,19 @@ setup-python-job:
   script:
     - echo "setup python"
     - |
+      curl -s https://www.google.com.hk --max-time 1 -o /dev/null || {
+        [ -f /etc/apt/sources.list ] && sed -i 's#deb.debian.org#mirrors.aliyun.com#g' /etc/apt/sources.list
+      }
       command -v ping || {
         [ -f /etc/apt/sources.list ] && cat /etc/apt/sources.list
+        [ -f /etc/os-release ] && cat /etc/os-release
         apt update
-        apt-get install -y iputils-ping sudo iproute2 net-tools wget jq  curl ca-certificates
+        apt-get install -y iputils-ping wget curl ca-certificates
       }
       command -v python3 || {
-        sudo apt-get install -y python3 python3-pip
+        apt-get install -y python3 python3-pip
       }
+      command -v pip3 || apt-get install -y python3-pip
       ping -c 1 -W 1 www.google.com.hk || {
         pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
       }
