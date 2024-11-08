@@ -66,10 +66,11 @@ pages:
         apt-get install -y iputils-ping wget curl ca-certificates
       }
       env
-      ping -c 1 -W 1 www.google.com.hk || {
+      ping -c1 -W5 www.google.com.hk || {
         pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
       }
       pip3 install -r requirements.txt --trusted-host de.vicp.net
+      
   script:
   - |
     chmod +x tools/doc.sh
