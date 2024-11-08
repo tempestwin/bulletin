@@ -1,0 +1,82 @@
+2024-11-08 13:02:45 - vilink.py[line:219] - INFO: start vilink check uncommit in git repo
+2024-11-08 13:02:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\credential && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\credential && git status |grep "Your branch is ahead"
+2024-11-08 13:02:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\new-word && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\new-word && git status |grep "Your branch is ahead"
+2024-11-08 13:02:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\draft && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:45 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\draft && git add --all
+2024-11-08 13:02:45 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\draft && git commit -a -m "NOCR: committed by shell from SSZ-PRO16
+2024-11-08 13:02:46 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\draft && git status |grep "Your branch is ahead"
+2024-11-08 13:02:46 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\draft && git pull --rebase
+2024-11-08 13:02:47 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\draft && git push && echo 1
+2024-11-08 13:02:54 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\autohotkey && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:54 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\autohotkey && git status |grep "Your branch is ahead"
+2024-11-08 13:02:54 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\doc-template && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:54 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\doc-template && git status |grep "Your branch is ahead"
+2024-11-08 13:02:55 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\tmp-java-modules && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:55 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\tmp-java-modules && git status |grep "Your branch is ahead"
+2024-11-08 13:02:55 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\applications && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:55 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\applications && git status |grep "Your branch is ahead"
+2024-11-08 13:02:55 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\webprojects && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:55 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\webprojects && git status |grep "Your branch is ahead"
+2024-11-08 13:02:56 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-shared && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:56 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-shared && git status |grep "Your branch is ahead"
+2024-11-08 13:02:56 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-python && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:02:56 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-python && git add --all
+2024-11-08 13:02:56 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-python && git commit -a -m "NOCR: committed by shell from SSZ-PRO16
+2024-11-08 13:02:56 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-python && git status |grep "Your branch is ahead"
+2024-11-08 13:02:56 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-python && git pull --rebase
+2024-11-08 13:02:57 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-python && git push && echo 1
+2024-11-08 13:03:08 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-backup && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:08 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-backup && git status |grep "Your branch is ahead"
+2024-11-08 13:03:09 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-standalone && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:09 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-standalone && git add --all
+2024-11-08 13:03:09 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-standalone && git commit -a -m "NOCR: committed by shell from SSZ-PRO16
+2024-11-08 13:03:09 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-standalone && git status |grep "Your branch is ahead"
+2024-11-08 13:03:09 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-standalone && git pull --rebase
+2024-11-08 13:03:10 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm-standalone && git push && echo 1
+2024-11-08 13:03:22 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\power-station && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:22 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\power-station && git status |grep "Your branch is ahead"
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\jenkins-pipeline && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\jenkins-pipeline && git status |grep "Your branch is ahead"
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-chocolatey && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-chocolatey && git status |grep "Your branch is ahead"
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-cloud-native && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm-cloud-native && git status |grep "Your branch is ahead"
+2024-11-08 13:03:23 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:23 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm && git add --all
+2024-11-08 13:03:24 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm && git commit -a -m "NOCR: committed by shell from SSZ-PRO16
+2024-11-08 13:03:24 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\scm && git status |grep "Your branch is ahead"
+2024-11-08 13:03:24 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm && git pull --rebase
+2024-11-08 13:03:25 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\app\scm && git push && echo 1
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\react-modules-deprecated && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\react-modules-deprecated && git status |grep "Your branch is ahead"
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\react-modules && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\react-modules && git status |grep "Your branch is ahead"
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\cellong-web && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\cellong-web && git status |grep "Your branch is ahead"
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\react-rpcweb && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:43 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\react-rpcweb && git status |grep "Your branch is ahead"
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\node-modules && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\node-modules && git status |grep "Your branch is ahead"
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\vscode-plugins && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\vscode-plugins && git status |grep "Your branch is ahead"
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\chrome-extensions && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\chrome-extensions && git status |grep "Your branch is ahead"
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\tmp-offer && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:44 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\tmp-offer && git status |grep "Your branch is ahead"
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\bulletin && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\app\bulletin && git status |grep "Your branch is ahead"
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\ShaoOrg\bulletin && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\ShaoOrg\bulletin && git status |grep "Your branch is ahead"
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\bulletin && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\bulletin && git status |grep "Your branch is ahead"
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\ci-cd-demo && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:45 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\ci-cd-demo && git add --all
+2024-11-08 13:03:45 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\ci-cd-demo && git commit -a -m "NOCR: committed by shell from SSZ-PRO16
+2024-11-08 13:03:45 - tshell.py[line:42] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\ci-cd-demo && git status |grep "Your branch is ahead"
+2024-11-08 13:03:45 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\ci-cd-demo && git pull --rebase
+2024-11-08 13:03:46 - tshell.py[line:144] - INFO: cd C:\usr\ssz\workspace\git\SszOrg\ci-cd-demo && git push && echo 1
+2024-11-08 13:03:53 - tshell.py[line:42] - INFO: cd D:\git\ium-3rdparty && git status --porcelain -uall --ignore-submodules=all
+2024-11-08 13:03:53 - tshell.py[line:144] - INFO: cd D:\git\ium-3rdparty && git add --all
+2024-11-08 13:03:53 - tshell.py[line:144] - INFO: cd D:\git\ium-3rdparty && git commit -a -m "NOCR: committed by shell from SSZ-PRO16
