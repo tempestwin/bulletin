@@ -17,7 +17,8 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
+env:
+  NODE_TLS_REJECT_UNAUTHORIZED: 0
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -43,9 +44,9 @@ jobs:
   doc:
     runs-on: [ ubuntu-latest ]
     steps:
-      - name: Set NODE_TLS_REJECT_UNAUTHORIZED to 0
+      - name: Print Evn
         run: |
-          echo "NODE_TLS_REJECT_UNAUTHORIZED=0" >> $GITHUB_ENV
+          env
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
@@ -79,9 +80,6 @@ jobs:
     runs-on: [ ubuntu-latest ]
     needs: doc
     steps:
-      - name: Set NODE_TLS_REJECT_UNAUTHORIZED to 0
-        run: |
-          echo "NODE_TLS_REJECT_UNAUTHORIZED=0" >> $GITHUB_ENV
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v3
