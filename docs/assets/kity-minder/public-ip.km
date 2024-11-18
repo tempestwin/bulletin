@@ -150,6 +150,6 @@
         ]
     },
     "template": "default",
-    "theme": "fish",
-    "version": "1.4.43"
+    "theme": "fresh-green-compat",
+    "version": "1.4.33"
 }
