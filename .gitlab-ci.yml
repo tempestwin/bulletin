@@ -17,39 +17,19 @@
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
 image: python:3.13-bookworm
+variables:
+  CI_VAR: "the variable value from CI"
+  DRAWIO_EDITOR_URL: https://de.vicp.net:25053
+  KITY_MINDER_EDITOR_URL: https://de.vicp.net:25053
+  DEPLOY_ENV:
+    description: "Select the deployment environment"
+    value: "staging"         # 默认值
+    options:
+      - "staging"
+      - "deploy"
 
 stages:          # List of stages for jobs, and their order of execution
-  - build
-  - test
   - deploy
-
-build-job:       # This job runs in the build stage, which runs first.
-  stage: build
-  script:
-    - echo "Compiling the code..."
-    - echo "Compile complete."
-
-unit-test-job:   # This job runs in the test stage.
-  stage: test    # It only starts when the job in the build stage completes successfully.
-  script:
-    - echo "Running unit tests... This will take about 1 seconds."
-    - env
-    - sleep 1
-    - echo "Code coverage is 90%"
-
-lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
-  script:
-    - echo "Linting code... This will take about 1 seconds."
-    - sleep 1
-    - echo "No lint issues found."
-
-deploy-job:      # This job runs in the deploy stage.
-  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
-  environment: production
-  script:
-    - echo "Deploying application..."
-    - echo "Application successfully deployed."
 
 pages:
   stage: deploy
@@ -67,13 +47,12 @@ pages:
       }
       env
       ping -c1 -W5 www.google.com.hk || {
-        pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
+        ping -c 1 -W 1 192.168.50.236 || pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple/
       }
       pip3 install -r requirements.txt --trusted-host de.vicp.net
       
   script:
   - |
-    chmod +x tools/doc.sh
     tools/doc.sh
     mkdocs build --clean --site-dir public
     mkdocs --version
@@ -81,4 +60,4 @@ pages:
     paths:
       - public
   rules:
-    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH && ($CI_SERVER_HOST != "jihulab.com" || $DEPLOY_ENV == "deploy")
