@@ -117,11 +117,11 @@ plugins:  #插件
           new:
             title: '新建'
             image: 'data:image/svg+xml;base64,PHN2ZyB0PSIxNzMxODU0MjU3MTkzIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjQyNjMiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNOTE0LjE4MTc0MiAyNTEuNjIxMDI3TDY3Mi4xNzQyMDggMTAuMjk1MjA1QTM0LjA4NTU2OCAzNC4wODU1NjggMCAwIDAgNjQ1LjU4NzQ2NSAwLjA2OTUzNUgxMzQuMzAzOTQ0YTM0LjA4NTU2OCAzNC4wODU1NjggMCAwIDAtMzQuMDg1NTY5IDM0LjA4NTU2OHY5NTQuMzk1OTA2YTM0LjA4NTU2OCAzNC4wODU1NjggMCAwIDAgMzQuMDg1NTY5IDM0LjA4NTU2OGg3NTUuMzM2MTg4YTM0LjA4NTU2OCAzNC4wODU1NjggMCAwIDAgMzQuMDg1NTY5LTM0LjA4NTU2OFYyNzIuNzU0MDc5YTM0LjA4NTU2OCAzNC4wODU1NjggMCAwIDAtOS41NDM5NTktMjEuMTMzMDUyeiBtLTkyLjcxMjc0NiAzLjQwODU1N0g2NjYuNzIwNTE3VjEwMC45NjI4MTZ6TTE2OC4zODk1MTIgOTU0LjQ2NTQ0MVY2OC4yNDA2NzFoNDMwLjE1OTg2OXYyMjAuODc0NDgxYTM0LjA4NTU2OCAzNC4wODU1NjggMCAwIDAgMzQuMDg1NTY4IDM0LjA4NTU2OGgyMjIuOTE5NjE1Vjk1NC40NjU0NDF6IiBmaWxsPSIjNjY2NjY2IiBwLWlkPSI0MjY0Ij48L3BhdGg+PHBhdGggZD0iTTcxMy43NTg2MDEgNTQ1LjQzODYyNEg1NDguMTAyNzRWMzc5Ljc4Mjc2M2EzNC4wODU1NjggMzQuMDg1NTY4IDAgMCAwLTY4LjE3MTEzNiAwVjU0NS40Mzg2MjRIMzA0LjczMTc4NGEzNC4wODU1NjggMzQuMDg1NTY4IDAgMCAwLTM0LjA4NTU2OCAzNC4wODU1NjggMzMuNDAzODU3IDMzLjQwMzg1NyAwIDAgMCA0Ljc3MTk3OSAxNi4zNjEwNzMgMzQuMDg1NTY4IDM0LjA4NTU2OCAwIDAgMCAzMS4zNTg3MjMgMjEuMTMzMDUyaDE3MC40Mjc4NDF2MTcwLjQyNzg0YTM0LjA4NTU2OCAzNC4wODU1NjggMCAxIDAgNjguMTcxMTM2IDBWNjE4LjM4MTc0aDE3MC40Mjc4NGEzNC4wODU1NjggMzQuMDg1NTY4IDAgMCAwIDM0LjA4NTU2OC0zNC4wODU1NjggMzMuNDAzODU3IDMzLjQwMzg1NyAwIDAgMC00Ljc3MTk3OS0xNi4zNjEwNzNBMzQuMDg1NTY4IDM0LjA4NTU2OCAwIDAgMCA3MTMuNzU4NjAxIDU0NS40Mzg2MjR6IiBmaWxsPSIjNjY2NjY2IiBwLWlkPSI0MjY1Ij48L3BhdGg+PC9zdmc+'
-            handler: "(function(){const dirname='${file}'.replace(new RegExp(\".*/assets/\"), \"\").replace(new RegExp(\"/.*.drawio\"), \"\");let newFile = window.prompt(\"新建文件名字,自动加上.drawio\");window.open(\"${DRAWIO_EDITOR_URL}/local-drawio/?title=#Uhttps://de.vicp.net:25053/proxy?url=https://raw.github.shao.sh/tempestwin/bulletin/main/docs/assets/\" + dirname + \"/\" + newFile+ \".drawio\");})"
+            handler: "(function(){const dirname='${file}'.replace(new RegExp(\"(.*/)*assets/\"), \"\").replace(new RegExp(\"/.*.drawio\"), \"\");let newFile = window.prompt(\"新建文件名字,自动加上.drawio\");window.open(\"${DRAWIO_EDITOR_URL}/local-drawio/?title=#Uhttps://de.vicp.net:25053/proxy?url=https://raw.github.shao.sh/tempestwin/bulletin/main/docs/assets/\" + dirname + \"/\" + newFile+ \".drawio\");})"
           edit:
             title: 'edit'
             image: 'data:image/svg+xml;base64,PHN2ZyB0PSIxNzMxNzc2NTc2MjEwIiBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHAtaWQ9IjE0NzIiIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48cGF0aCBkPSJNODY0LjcxMTExMSAyNjcuMzc3Nzc4bC0xNjQuOTc3Nzc4LTE2NC45Nzc3NzggODUuMzMzMzMzLTg1LjMzMzMzM2MyOC40NDQ0NDQtMjguNDQ0NDQ0IDczLjk1NTU1Ni0yOC40NDQ0NDQgOTYuNzExMTExIDBsNjguMjY2NjY3IDY4LjI2NjY2N2MyOC40NDQ0NDQgMjguNDQ0NDQ0IDI4LjQ0NDQ0NCA3My45NTU1NTYgMCA5Ni43MTExMTFMODY0LjcxMTExMSAyNjcuMzc3Nzc4ek0zODYuODQ0NDQ0IDc0NS4yNDQ0NDQgMjIxLjg2NjY2NyA1ODAuMjY2NjY3bDQ0OS40MjIyMjItNDQzLjczMzMzMyAxNjQuOTc3Nzc4IDE2NC45Nzc3NzhMMzg2Ljg0NDQ0NCA3NDUuMjQ0NDQ0ek05MS4wMjIyMjIgODgxLjc3Nzc3OGwxMDIuNC0yNjcuMzc3Nzc4IDE2NC45Nzc3NzggMTY0Ljk3Nzc3OEw5MS4wMjIyMjIgODgxLjc3Nzc3OHpNODMwLjU3Nzc3OCA5MzguNjY2NjY3YzIyLjc1NTU1NiAwIDM5LjgyMjIyMiAxNy4wNjY2NjcgMzkuODIyMjIyIDM5LjgyMjIyMiAwIDIyLjc1NTU1Ni0xNy4wNjY2NjcgMzkuODIyMjIyLTM5LjgyMjIyMiAzOS44MjIyMjJsLTczOS41NTU1NTYgMEM2OC4yNjY2NjcgMTAyNCA1MS4yIDEwMDEuMjQ0NDQ0IDUxLjIgOTc4LjQ4ODg4OWMwLTIyLjc1NTU1NiAxNy4wNjY2NjctMzkuODIyMjIyIDM5LjgyMjIyMi0zOS44MjIyMjJMODMwLjU3Nzc3OCA5MzguNjY2NjY3eiIgZmlsbD0iIzA0MDAwMCIgcC1pZD0iMTQ3MyI+PC9wYXRoPjwvc3ZnPg=='
-            handler: "(function(){const file='${file}'.replace(new RegExp(\".*/assets/\"), \"\");window.open(\"${DRAWIO_EDITOR_URL}/local-drawio/?title=#Uhttps://de.vicp.net:25053/proxy?url=https://raw.github.shao.sh/tempestwin/bulletin/main/docs/assets/\" + file);})"
+            handler: "(function(){const file='${file}'.replace(new RegExp(\"(.*/)*assets/\"), \"\");window.open(\"${DRAWIO_EDITOR_URL}/local-drawio/?title=#Uhttps://de.vicp.net:25053/proxy?url=https://raw.github.shao.sh/tempestwin/bulletin/main/docs/assets/\" + file);})"
       kity_minder_extra_toolbar: "<button id='btn-${minder_view_id}-new' class='btn-minder-view-toolbar' file=${file}>📃</button><button id='btn-${minder_view_id}-edit' class='btn-minder-view-toolbar' file=${file}>✔</button>"
       kity_minder_global_style: |
         .btn-minder-view-toolbar {
@@ -149,7 +149,7 @@ plugins:  #插件
 
       kity_minder_container_extra_javascript: |
         document.getElementById('btn-${minder_view_id}-new') && document.getElementById('btn-${minder_view_id}-new').addEventListener('click', function() {
-            const file = this.getAttribute("file").replace(/.*\/assets\//, '');
+            const file = this.getAttribute("file").replace(/(.*\/)*assets\//, '');
             const fileArray = file.split("/");
             fileArray.pop();
             const dirname = fileArray.join("/");
@@ -158,7 +158,7 @@ plugins:  #插件
             window.open("${KITY_MINDER_EDITOR_URL}/local-kity-minder/?assets=https://raw.github.shao.sh/tempestwin/bulletin/main/docs/assets/" + dirname + "/" + newFile);
         });
         document.getElementById('btn-${minder_view_id}-edit') && document.getElementById('btn-${minder_view_id}-edit').addEventListener('click', function() {
-            const file = this.getAttribute("file").replace(/.*\/assets\//, '');
+            const file = this.getAttribute("file").replace(/(.*\/)*assets\//, '');
             window.open("${KITY_MINDER_EDITOR_URL}/local-kity-minder/?assets=https://raw.github.shao.sh/tempestwin/bulletin/main/docs/assets/" + file);
         });
 
