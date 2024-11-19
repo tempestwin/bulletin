@@ -1,125 +1,136 @@
-<mxfile host="65bd71144e">
-    <diagram id="IGNaPQVdiePCNsB7grzX" name="process">
-        <mxGraphModel dx="693" dy="318" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
-            <root>
-                <mxCell id="0"/>
-                <mxCell id="1" parent="0"/>
-                <mxCell id="2" value="Public IP" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;html=1;" vertex="1" parent="1">
-                    <mxGeometry x="70" y="60" width="560" height="530" as="geometry"/>
-                </mxCell>
-                <mxCell id="3" value="Jenkins" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="2">
-                    <mxGeometry y="20" width="560" height="120" as="geometry"/>
-                </mxCell>
-                <mxCell id="6" value="Node Nas246" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="3">
-                    <mxGeometry x="90" y="20" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="7" value="Node LanxiVpn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="3">
-                    <mxGeometry x="420" y="20" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="4" value="Repository" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="2">
-                    <mxGeometry y="140" width="560" height="190" as="geometry"/>
-                </mxCell>
-                <mxCell id="30" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;" edge="1" parent="4" source="12" target="24">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="12" value="Github.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="4">
-                    <mxGeometry x="230" y="32.5" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="31" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;" edge="1" parent="4" source="24" target="25">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="24" value="git hooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="4">
-                    <mxGeometry x="230" y="77.5" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="25" value="各个存储库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="4">
-                    <mxGeometry x="230" y="127.5" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <UserObject label="CI/CD" link="https://bulletin-7bbf8a.gitlab.io/" id="5">
-                    <mxCell style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="2">
-                        <mxGeometry y="330" width="560" height="200" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="36" style="edgeStyle=none;html=1;entryX=0.375;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="13" target="22">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="37" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="13" target="14">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="38" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="13" target="15">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="13" value="Gitlab-Pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="5">
-                    <mxGeometry x="410" y="20" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="14" value="gitlab.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                    <mxGeometry x="380" y="85" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <UserObject label="jihulab.com" link="https://bulletin-a6b9b9.pages.jihulab.net/" id="15">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                        <mxGeometry x="480" y="85" width="70" height="30" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject label="github.shao.sh" link="https://pages.github.shao.sh/tempestwin/bulletin/" id="16">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                        <mxGeometry x="140" y="85" width="80" height="30" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject label="gitlab.shao.sh" link="https://de.vicp.net:48443/tempestwin/bulletin/" id="22">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                        <mxGeometry x="280" y="85" width="80" height="30" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <UserObject label="github.com" link="https://tempestwin.github.io/bulletin/" id="23">
-                    <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
-                        <mxGeometry x="30" y="85" width="80" height="30" as="geometry"/>
-                    </mxCell>
-                </UserObject>
-                <mxCell id="34" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="26" target="23">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="35" style="edgeStyle=none;html=1;entryX=0.592;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="26" target="16">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="26" value="Github-Pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="5">
-                    <mxGeometry x="80" y="20" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="2" source="25" target="26">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="265" y="365"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="33" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="2" source="25" target="13">
-                    <mxGeometry relative="1" as="geometry">
-                        <Array as="points">
-                            <mxPoint x="265" y="365"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="11" value="Node" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
-                    <mxGeometry x="180" y="10" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="27" value="逻辑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-                    <mxGeometry x="300" y="10" width="70" height="30" as="geometry"/>
-                </mxCell>
-                <mxCell id="28" style="edgeStyle=none;html=1;dashed=1;fillColor=#fff2cc;strokeColor=#000000;" edge="1" parent="1" source="6">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="340" y="230" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="340" y="115"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="29" style="edgeStyle=none;html=1;dashed=1;" edge="1" parent="1" source="7">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="340" y="230" as="targetPoint"/>
-                        <Array as="points">
-                            <mxPoint x="340" y="115"/>
-                        </Array>
-                    </mxGeometry>
-                </mxCell>
-            </root>
-        </mxGraphModel>
-    </diagram>
+<mxfile host="de.vicp.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36" version="24.7.17" pages="2">
+  <diagram id="IGNaPQVdiePCNsB7grzX" name="process">
+    <mxGraphModel dx="693" dy="318" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="Public IP" style="swimlane;childLayout=stackLayout;resizeParent=1;resizeParentMax=0;horizontal=1;startSize=20;horizontalStack=0;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="60" width="560" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Jenkins" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="2">
+          <mxGeometry y="20" width="560" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Node Nas246" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="3">
+          <mxGeometry x="90" y="20" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Node LanxiVpn" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="3">
+          <mxGeometry x="420" y="20" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Repository" style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="2">
+          <mxGeometry y="140" width="560" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="30" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;" edge="1" parent="4" source="12" target="24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="Github.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="4">
+          <mxGeometry x="230" y="32.5" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="31" style="edgeStyle=none;html=1;dashed=1;strokeColor=#000000;" edge="1" parent="4" source="24" target="25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="git hooks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="4">
+          <mxGeometry x="230" y="77.5" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="各个存储库" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="4">
+          <mxGeometry x="230" y="127.5" width="70" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="CI/CD" link="https://bulletin-7bbf8a.gitlab.io/" id="5">
+          <mxCell style="swimlane;startSize=20;horizontal=0;html=1;" vertex="1" parent="2">
+            <mxGeometry y="330" width="560" height="200" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="36" style="edgeStyle=none;html=1;entryX=0.375;entryY=0.167;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="13" target="22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="37" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="13" target="14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="38" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="13" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="Gitlab-Pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="5">
+          <mxGeometry x="410" y="20" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="gitlab.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+          <mxGeometry x="380" y="85" width="70" height="30" as="geometry" />
+        </mxCell>
+        <UserObject label="jihulab.com" link="https://bulletin-a6b9b9.pages.jihulab.net/" id="15">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+            <mxGeometry x="480" y="85" width="70" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="github.shao.sh" link="https://pages.github.shao.sh/tempestwin/bulletin/" id="16">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+            <mxGeometry x="140" y="85" width="80" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="gitlab.shao.sh" link="https://de.vicp.net:48443/tempestwin/bulletin/" id="22">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+            <mxGeometry x="280" y="85" width="80" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="github.com" link="https://tempestwin.github.io/bulletin/" id="23">
+          <mxCell style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="5">
+            <mxGeometry x="30" y="85" width="80" height="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="34" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="26" target="23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="35" style="edgeStyle=none;html=1;entryX=0.592;entryY=-0.007;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;strokeColor=#000000;" edge="1" parent="5" source="26" target="16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="Github-Pages" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="5">
+          <mxGeometry x="80" y="20" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="32" style="edgeStyle=none;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="2" source="25" target="26">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" style="edgeStyle=none;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;strokeColor=#000000;" edge="1" parent="2" source="25" target="13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Node" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#6a00ff;strokeColor=#3700CC;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="180" y="10" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="逻辑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="300" y="10" width="70" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="28" style="edgeStyle=none;html=1;dashed=1;fillColor=#fff2cc;strokeColor=#000000;" edge="1" parent="1" source="6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="115" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="29" style="edgeStyle=none;html=1;dashed=1;" edge="1" parent="1" source="7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="115" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="kz7jI0kYbtYxVh_F5Vl2" name="Page-2">
+    <mxGraphModel dx="340" dy="599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oYX658jE3fUFqFXXDaNv-1" value="" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="210" width="120" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
 </mxfile>
