@@ -21,6 +21,7 @@ variables:
   CI_VAR: "the variable value from CI"
   DRAWIO_EDITOR_URL: https://de.vicp.net:25053
   KITY_MINDER_EDITOR_URL: https://de.vicp.net:25053
+  ASSETS_FOLDER: tempestwin/bulletin/main/docs/assets
   DEPLOY_ENV:
     description: "Select the deployment environment"
     value: "staging"         # 默认值
