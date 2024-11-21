@@ -5,4 +5,4 @@ mkdocs>=1.5.3
 # (https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
 mkdocs-material>=5.4.0
 jieba
-https://de.vicp.net:39002/tools/scm/python/mkdocs-drawio/mkdocs_drawio_km-1.7.2-py3-none-any.whl
+https://de.vicp.net:39002/tools/scm/python/mkdocs-drawio/mkdocs_drawio_km-1.7.3-py3-none-any.whl
