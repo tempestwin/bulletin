@@ -1,11 +1,14 @@
-2025-01-02 01:41:02 INFO:: ------ call_func::starting...
-2025-01-02 01:41:03 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
-2025-01-02 01:41:03 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
-[31m2025-01-02 01:41:03 WARN:: Avaiable Ingress IP And Mac(B[m
+2025-01-04 01:41:02 INFO:: ------ call_func::starting...
+2025-01-04 01:41:03 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
+2025-01-04 01:41:03 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
+[31m2025-01-04 01:41:03 WARN:: Avaiable Ingress IP And Mac(B[m
 192.168.10.4                     (incomplete)                              eth0
 192.168.10.102                   (incomplete)                              eth0
 192.168.10.28                    (incomplete)                              eth0
 192.168.10.116           ether   50:81:40:d6:59:aa   C                     eth0
+192.168.10.59                    (incomplete)                              eth0
+192.168.10.19                    (incomplete)                              eth0
+192.168.10.158                   (incomplete)                              eth0
 192.168.10.9                     (incomplete)                              eth0
 192.168.10.117                   (incomplete)                              eth0
 192.168.10.56                    (incomplete)                              eth0
@@ -18,13 +21,15 @@
 192.168.10.230           ether   6c:92:bf:27:4e:c5   C                     eth0
 192.168.10.105           ether   7e:06:22:0b:4b:fb   C                     eth0
 192.168.10.75                    (incomplete)                              eth0
+192.168.10.6                     (incomplete)                              eth0
 192.168.10.231           ether   6c:92:bf:27:4e:fb   C                     eth0
 192.168.10.108                   (incomplete)                              eth0
 192.168.10.118           ether   52:54:00:ea:ca:34   C                     eth0
+192.168.10.7                     (incomplete)                              eth0
 192.168.10.1             ether   54:16:51:12:15:84   C                     eth0
 192.168.10.113                   (incomplete)                              eth0
-[31m2025-01-02 01:41:03 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in(B[m
+[31m2025-01-04 01:41:03 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in(B[m
 netsh -c i i add neighbors 7 192.168.10.28 eth0
 arp -s 192.168.10.28 eth0
-2025-01-02 01:41:03 INFO:: plugin list_ingress install completed
+2025-01-04 01:41:03 INFO:: plugin list_ingress install completed
 
