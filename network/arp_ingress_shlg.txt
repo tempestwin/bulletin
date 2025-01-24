@@ -1,9 +1,10 @@
-2025-01-24 01:41:02 INFO:: ------ call_func::starting...
-2025-01-24 01:41:02 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
-2025-01-24 01:41:02 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
-[31m2025-01-24 01:41:03 WARN:: Avaiable Ingress IP And Mac(B[m
+2025-01-25 01:41:02 INFO:: ------ call_func::starting...
+2025-01-25 01:41:02 INFO:: call_func::max_match_func_lookup_key[kernal:app:router] 
+2025-01-25 01:41:02 INFO:: lazy_load_shell:: /sh/lib/kernal/plugin_app/plugin_router/plugin_kernal_app_router.sh
+[31m2025-01-25 01:41:02 WARN:: Avaiable Ingress IP And Mac(B[m
 192.168.10.48                    (incomplete)                              eth0
 192.168.10.34                    (incomplete)                              eth0
+192.168.10.154                   (incomplete)                              eth0
 192.168.10.82                    (incomplete)                              eth0
 192.168.10.127           ether   5c:24:1f:7e:53:94   C                     eth0
 192.168.10.118           ether   52:54:00:ea:ca:34   C                     eth0
@@ -12,6 +13,7 @@
 192.168.10.5                     (incomplete)                              eth0
 192.168.10.230           ether   6c:92:bf:27:4e:c5   C                     eth0
 192.168.10.172                   (incomplete)                              eth0
+192.168.10.31                    (incomplete)                              eth0
 192.168.10.100                   (incomplete)                              eth0
 192.168.10.114                   (incomplete)                              eth0
 192.168.10.22                    (incomplete)                              eth0
@@ -26,6 +28,7 @@
 192.168.10.9                     (incomplete)                              eth0
 192.168.10.59                    (incomplete)                              eth0
 192.168.10.36                    (incomplete)                              eth0
+192.168.10.248                   (incomplete)                              eth0
 192.168.10.93                    (incomplete)                              eth0
 192.168.10.113                   (incomplete)                              eth0
 192.168.10.21                    (incomplete)                              eth0
@@ -38,14 +41,17 @@
 192.168.10.66                    (incomplete)                              eth0
 192.168.10.111           ether   52:54:00:b9:17:86   C                     eth0
 192.168.10.116           ether   50:81:40:d6:59:aa   C                     eth0
+192.168.10.8                     (incomplete)                              eth0
 192.168.10.3                     (incomplete)                              eth0
 192.168.10.102                   (incomplete)                              eth0
+192.168.10.222                   (incomplete)                              eth0
 192.168.10.121                   (incomplete)                              eth0
 192.168.10.40                    (incomplete)                              eth0
 192.168.10.6                     (incomplete)                              eth0
 192.168.10.88                    (incomplete)                              eth0
 192.168.10.182                   (incomplete)                              eth0
 192.168.10.124           ether   52:54:00:0f:0a:db   C                     eth0
+192.168.10.16                    (incomplete)                              eth0
 192.168.10.61                    (incomplete)                              eth0
 192.168.10.2                     (incomplete)                              eth0
 192.168.10.200                   (incomplete)                              eth0
@@ -54,8 +60,8 @@
 192.168.10.106           ether   2c:70:4f:7b:b8:18   C                     eth0
 192.168.10.101                   (incomplete)                              eth0
 192.168.10.28                    (incomplete)                              eth0
-[31m2025-01-24 01:41:03 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in(B[m
+[31m2025-01-25 01:41:02 WARN:: Static Arp Entry, to get IDX (7), please use: netsh i i show in(B[m
 netsh -c i i add neighbors 7 192.168.10.28 eth0
 arp -s 192.168.10.28 eth0
-2025-01-24 01:41:03 INFO:: plugin list_ingress install completed
+2025-01-25 01:41:02 INFO:: plugin list_ingress install completed
 
