@@ -1,3 +1,3 @@
-## Public IP Infomration Sat Jul  5 02:00:02 CST 2025
-* nas246.shao.sh 192.168.50.246 180.165.128.22
+## Public IP Infomration Sun Jul  6 02:00:02 CST 2025
+* nas246.shao.sh 192.168.50.246 180.157.54.44
 
