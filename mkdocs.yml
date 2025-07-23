@@ -28,6 +28,8 @@ theme:  #主题
     - search.share   #搜索共享
     - header.autohide  #标题自动隐藏
     - announce.dismiss  #标记为已读（付费功能）
+    - content.tabs.link #Content Tabs
+
   palette:     #切换昼夜模式的颜色，审美差就用默认，专业点就自定义
     - media: "(prefers-color-scheme: light)"
       scheme: default  #配色方案：浅色模式
@@ -136,6 +138,8 @@ extra_javascript:
   - javascripts/mathjax.js  #数学公式的JS
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
 
 extra:
 #  version: #版本控制
