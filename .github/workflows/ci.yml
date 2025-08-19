@@ -81,11 +81,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
-      - name: Upload to GitHub Pages (GHES)
-        if: ${{ github.server_url != 'https://github.com' }}
-        uses: actions/upload-pages-artifact@v2
-        with:
-          path: site
+      # - name: Upload to GitHub Pages (GHES)
+      #   if: ${{ github.server_url != 'https://github.com' }}
+      #   uses: actions/upload-pages-artifact@v2
+      #   with:
+      #     path: site
 
   # Deployment job
   deploy:
@@ -100,7 +100,7 @@ jobs:
         id: deploy_cloud
         uses: actions/deploy-pages@v4
 
-      - name: Deploy to GitHub Pages (GHES)
-        if: ${{ github.server_url != 'https://github.com' }}
-        id: deploy_ghes
-        uses: actions/deploy-pages@v3
+      # - name: Deploy to GitHub Pages (GHES)
+      #   if: ${{ github.server_url != 'https://github.com' }}
+      #   id: deploy_ghes
+      #   uses: actions/deploy-pages@v3
