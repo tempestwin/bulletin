@@ -39,7 +39,7 @@ permissions:
 
 jobs:
   build:
-    uses: tempestwin/bulletin/.github/workflows/ci.yml@main
+    uses: ShaoOrg/bulletin/.github/workflows/github-pages-ci.yml@main
     with:
       DEPLOY_ENV: ${{github.event.inputs.DEPLOY_ENV}}
       USING_REPO_README: "true"
