@@ -4,15 +4,24 @@ name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
+    inputs:
+      DEPLOY_ENV:
+        description: "Select deployment environment"
+        required: true
+        default: "staging"
+        type: string
+      COMBIND_REACT_WORKFLOW_NAME:
+        description: "combind react build dist folder into mkdocs material"
+        required: false
+        default: ""
+        type: string
+      USING_REPO_README:
+        description: "using repo readme.md to replace index.md"
+        required: false
+        default: ""
+        type: string
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -28,7 +37,10 @@ jobs:
   doc:
     runs-on: [ ubuntu-latest ]
     steps:
-      - name: Print Evn
+      - name: "Set environmental variables" # workaround for unsupported nest env var
+        run: |
+          echo "ASSETS_FOLDER=$GITHUB_REPOSITORY/$GITHUB_REF_NAME/docs/assets" >> $GITHUB_ENV
+      - name: Print Env
         run: |
           env
       - name: Checkout
@@ -48,6 +60,11 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.x"
+      - name: using repo readme to replace index.md
+        if: inputs.USING_REPO_README != ''
+        shell: bash
+        run: |
+          cp -f README.md docs/index.md
       - name: Build documentation
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}

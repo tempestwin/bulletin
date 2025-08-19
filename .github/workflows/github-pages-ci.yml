@@ -1,0 +1,167 @@
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: GitHub Pages CI
+
+on:
+  workflow_call:
+    inputs:
+      DEPLOY_ENV:
+        description: "Select deployment environment"
+        required: true
+        default: "staging"
+        type: string
+      COMBIND_REACT_WORKFLOW_NAME:
+        description: "combind react build dist folder into mkdocs material"
+        required: false
+        default: ""
+        type: string
+      USING_REPO_README:
+        description: "using repo readme.md to replace index.md"
+        required: false
+        default: ""
+        type: string
+        # type: choice
+        # options:
+        #   - "staging"
+        #   - "deploy"
+  # Allows you to run this workflow manually from the Actions tab
+  # workflow_dispatch:
+  #   inputs:
+  #     DEPLOY_ENV:
+  #       description: "Select deployment environment"
+  #       required: true
+  #       default: "staging"
+  #       type: choice
+  #       options:
+  #         - "staging"
+  #         - "deploy"
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: [ ubuntu-latest ]
+    if: ${{ inputs.DEPLOY_ENV == 'deploy' }} || github.event_name == 'push'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      DRAWIO_EDITOR_URL: https://de.vicp.net:25053
+      KITY_MINDER_EDITOR_URL: https://de.vicp.net:25053
+      NODE_TLS_REJECT_UNAUTHORIZED: 0
+      # ASSETS_FOLDER: ${{ vars.GITHUB_REPOSITORY }}/main/docs/assets
+    steps:
+      - name: "Set environmental variables" # workaround for unsupported nest env var
+        run: |
+          echo "ASSETS_FOLDER=$GITHUB_REPOSITORY/$GITHUB_REF_NAME/docs/assets" >> $GITHUB_ENV
+      - name: Print Env
+        run: |
+          env
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check IP reachability
+        id: ipcheck
+        run: |
+          if ping -c 1 -W 1 192.168.50.236 >/dev/null 2>&1; then
+            echo "reachable=true" >> $GITHUB_OUTPUT
+          else
+            echo "reachable=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Set up Python
+        if: steps.ipcheck.outputs.reachable == 'false'
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+      # - name: Setup Pages
+      #   uses: actions/configure-pages@v4
+      - name: using repo readme to replace index.md
+        if: inputs.USING_REPO_README != ''
+        shell: bash
+        run: |
+          cp -f README.md docs/index.md
+      - name: Build documentation
+        shell: bash
+        run: |
+          pushd ~ || exit 1
+          [ -d github-python-sszorg-bulletin ] || {
+            python3 -m venv github-python-sszorg-bulletin
+          }
+          source github-python-sszorg-bulletin/bin/activate
+          popd || exit 1
+          pwd
+          ./generate_md.sh $(pwd)
+          pip install mkdocs-material jieba
+          pip install mkdocs-drawio-km --upgrade
+          mkdocs build --clean
+          mkdocs --version
+      # - name: Combine react build into mkdocs material download artifact firstly
+      # 不使用actions/cache, 搞不定Failed to restore: downloadCache failed: write EPROTO 40A842E0307F0000:error:0A00010B:SSL routines:ssl3_get_record:wrong version number:../deps/openssl/openssl/ssl/record/ssl3_record.c:354:
+      #   if: inputs.COMBIND_REACT_DIST == true
+      #   uses: actions/cache@v4
+      #   with:
+      #     key: react-
+      #     path: dist
+      #     lookup-only: false
+      - name: Get latest successful run ID
+        if: inputs.COMBIND_REACT_WORKFLOW_NAME != ''
+        id: get_run
+        run: |
+          RUN_ID=$(gh run list \
+            --workflow="${{ inputs.COMBIND_REACT_WORKFLOW_NAME }}" \
+            --limit=1 \
+            --json databaseId \
+            --jq '.[0].databaseId')
+          echo "workflow=${{ inputs.COMBIND_REACT_WORKFLOW_NAME }}, run_id=$RUN_ID"
+          echo "run_id=$RUN_ID" >> $GITHUB_OUTPUT
+      - name: Combine react build into mkdocs material
+        if: inputs.COMBIND_REACT_WORKFLOW_NAME != ''
+        shell: bash
+        run: |
+          rm -rf site/react-web
+          rm -rf dist
+          mkdir -p site/react-web
+          mkdir -p dist && cd dist
+          gh run download ${{ steps.get_run.outputs.run_id }} -n react-dist
+          pwd
+          cd .. && cp -r dist/* site/react-web
+      - name: Upload to GitHub Pages (Cloud)
+        if: ${{ github.server_url == 'https://github.com' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Upload to GitHub Pages (GHES)
+        if: ${{ github.server_url != 'https://github.com' }}
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: site
+      - name: Deploy to GitHub Pages (Cloud)
+        if: ${{ github.server_url == 'https://github.com' }}
+        id: deploy_cloud
+        uses: actions/deploy-pages@v4
+
+      - name: Deploy to GitHub Pages (GHES)
+        if: ${{ github.server_url != 'https://github.com' }}
+        id: deploy_ghes
+        uses: actions/deploy-pages@v3
+
+  # Deployment job
+  # deploy:
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
+  #   runs-on: [ self-hosted ]
+  #   if: ${{ inputs.DEPLOY_ENV == 'deploy' }}|| github.event_name == 'push'
+  #   needs: build
+  #   steps:
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v3

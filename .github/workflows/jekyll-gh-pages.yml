@@ -1,0 +1,46 @@
+# Sample workflow for building and deploying a Jekyll site to GitHub Pages
+name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+
+on:
+  # Runs on pushes targeting the default branch
+  push: # And
+    branches: ["main"]
+    paths: # Or
+      - .github/workflows/**
+      - docs/**
+      - ./README.md
+      - ./generate_md.sh
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      DEPLOY_ENV:
+        description: "Select deployment environment"
+        required: true
+        default: "staging"
+        type: choice
+        options:
+          - "staging"
+          - "deploy"
+# env:
+#   DRAWIO_EDITOR_URL: https://de.vicp.net:25053
+#   KITY_MINDER_EDITOR_URL: https://de.vicp.net:25053
+# # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# concurrency:
+#   group: "pages"
+#   cancel-in-progress: false
+
+jobs:
+  build:
+    uses: tempestwin/bulletin/.github/workflows/ci.yml@main
+    with:
+      DEPLOY_ENV: ${{github.event.inputs.DEPLOY_ENV}}
+      USING_REPO_README: "true"
+    secrets: inherit
