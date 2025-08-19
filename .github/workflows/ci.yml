@@ -23,7 +23,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 env:
@@ -76,31 +76,8 @@ jobs:
           tools/doc.sh
           mkdocs build --clean
           mkdocs --version
-      - name: Upload to GitHub Pages (Cloud)
-        if: ${{ github.server_url == 'https://github.com' }}
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to GitHub Pages / GHES
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          path: site
-      # - name: Upload to GitHub Pages (GHES)
-      #   if: ${{ github.server_url != 'https://github.com' }}
-      #   uses: actions/upload-pages-artifact@v2
-      #   with:
-      #     path: site
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: [ ubuntu-latest ]
-    needs: doc
-    steps:
-      - name: Deploy to GitHub Pages (Cloud)
-        if: ${{ github.server_url == 'https://github.com' }}
-        id: deploy_cloud
-        uses: actions/deploy-pages@v4
-
-      # - name: Deploy to GitHub Pages (GHES)
-      #   if: ${{ github.server_url != 'https://github.com' }}
-      #   id: deploy_ghes
-      #   uses: actions/deploy-pages@v3
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site       # 构建产物目录
