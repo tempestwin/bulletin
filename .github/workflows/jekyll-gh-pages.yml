@@ -36,8 +36,16 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  deploy-ghes:
+    if: ${{ github.server_url != 'https://github.com' }}
     uses: ShaoOrg/bulletin/.github/workflows/github-pages-ci.yml@main
+    with:
+      DEPLOY_ENV: ${{github.event.inputs.DEPLOY_ENV}}
+      USING_REPO_README: "true"
+    secrets: inherit
+  deploy-cloud:
+    if: ${{ github.server_url == 'https://github.com' }}
+    uses: ShaoOrg/bulletin/.github/workflows/github-pages-ci-github-com.yml@main
     with:
       DEPLOY_ENV: ${{github.event.inputs.DEPLOY_ENV}}
       USING_REPO_README: "true"
