@@ -32,6 +32,7 @@ for holder_folder in network; do
 
     # 清空输出文件
     > "$output_file"
+    printf "\n## 第1行\n" >> "$output_file"
     while IFS= read -r line; do
       [ -z "$line" ] && continue
       # 写入当前行，后面加两个空格和换行符，实现Markdown换行
@@ -42,7 +43,7 @@ for holder_folder in network; do
 
       # 每40行插入分页符
       if [ $(expr $line_count % $lines_per_page) -eq 0 ]; then
-        printf "\n第$line_count页\n<div style=\"page-break-after: always;\"></div>\n" >> "$output_file"
+        printf "\n## 第${line_count}行\n" >> "$output_file"
       fi
     done < "$input_file"
   done
