@@ -32,7 +32,8 @@ for holder_folder in network; do
 
     # 清空输出文件
     > "$output_file"
-    while IFS= read -r line || "$line"; do
+    while IFS= read -r line; do
+      [ -z "$line" ] && continue
       # 写入当前行，后面加两个空格和换行符，实现Markdown换行
       trimmed_line="${line#"${line%%[![:space:]]*}"}"
       echo "${trimmed_line}  " >> "$output_file"
