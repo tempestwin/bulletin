@@ -42,7 +42,7 @@ for holder_folder in network; do
 
       # 每40行插入分页符
       if [ $(expr $line_count % $lines_per_page) -eq 0 ]; then
-        echo -e "\n第$line_count页\n<div style=\"page-break-after: always;\"></div>\n" >> "$output_file"
+        printf "\n第$line_count页\n<div style=\"page-break-after: always;\"></div>\n" >> "$output_file"
       fi
     done < "$input_file"
   done
