@@ -32,15 +32,15 @@ for holder_folder in network; do
 
     # 清空输出文件
     > "$output_file"
-    while IFS= read -r line || [[ -n $line ]]; do
+    while IFS= read -r line || "$line"; do
       # 写入当前行，后面加两个空格和换行符，实现Markdown换行
       trimmed_line="${line#"${line%%[![:space:]]*}"}"
       echo "${trimmed_line}  " >> "$output_file"
 
-      ((line_count++))
+      line_count=$((line_count+1))
 
       # 每40行插入分页符
-      if (( line_count % lines_per_page == 0 )); then
+      if [ $(expr $line_count % $lines_per_page) -eq 0 ]; then
         echo -e "\n第$line_count页\n<div style=\"page-break-after: always;\"></div>\n" >> "$output_file"
       fi
     done < "$input_file"
