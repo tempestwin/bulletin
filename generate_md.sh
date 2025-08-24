@@ -19,12 +19,14 @@ for km_file in $(ls $PROJECT_HOME/docs/assets/drawio|grep -E ".drawio$"); do
 done
 
 for holder_folder in network; do
-  ABS_TXT_FILE_FOLDER=$PROJECT_HOME/docs/$holder_folder
-  ls $PROJECT_HOME/docs/$holder_folder || exit 1
+  ABS_TXT_FILE_FOLDER=$PROJECT_HOME/$holder_folder
+  OUTPUT_ABS_TXT_FILE_FOLDER=$PROJECT_HOME/docs/$holder_folder
+  mkdir -p $OUTPUT_ABS_TXT_FILE_FOLDER
+  ls $ABS_TXT_FILE_FOLDER || exit 1
   for txt_file in $(ls $ABS_TXT_FILE_FOLDER |grep -E ".txt$"); do
     txt_file_basename=$(basename $txt_file .txt)
     input_file="$ABS_TXT_FILE_FOLDER/$txt_file"
-    output_file="$ABS_TXT_FILE_FOLDER/${txt_file_basename}.md"
+    output_file="$OUTPUT_ABS_TXT_FILE_FOLDER/${txt_file_basename}.md"
     lines_per_page=40
     line_count=0
 
