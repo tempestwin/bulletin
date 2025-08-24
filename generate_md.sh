@@ -20,6 +20,7 @@ done
 
 for holder_folder in network; do
   ABS_TXT_FILE_FOLDER=$PROJECT_HOME/docs/$holder_folder
+  ls $PROJECT_HOME/docs/$holder_folder || exit 1
   for txt_file in $(ls $ABS_TXT_FILE_FOLDER |grep -E ".txt$"); do
     txt_file_basename=$(basename $txt_file .txt)
     input_file="$ABS_TXT_FILE_FOLDER/$txt_file"
